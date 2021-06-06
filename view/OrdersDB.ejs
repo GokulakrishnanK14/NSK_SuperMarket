@@ -1,0 +1,44 @@
+<%- include("./partials/navbar") %>
+<div class="container">
+    <div class="row">
+        <% allOrders.forEach(function(product) { %>
+            <%var flag = 0 %>
+            <% product.orderList.forEach(function (user) { %>
+                    <div class="col-4 status">
+                        <div class="nameInOrderDB">
+                            <h5>Mr/Ms. <%= user.userName %></h5>
+                        </div>
+                        <div class="needForScroll">
+                            <div class="odStatus">
+                                <%= user.order_status %>
+                            </div> 
+                            <% var total = 0;  %> 
+                            <% (user.pdtInOrder).forEach(function(params) {%>
+                                <% if(flag==0) { %>
+                                    <div class="OD">
+                                        Order Date : 
+                                    </div>
+                                    <%= params.date %>
+                                    <% flag =1 %>
+                                    <hr>
+                                <% } %>
+                                <%= params.p_title %> (<%= params.p_req_quan %>) <br>
+                                <hr>
+                                <% total = total + (params.p_req_quan * params.p_price) %>
+                            <% }); %>
+                            <div class="totAmt">
+                                <h5>Rs.<%= total %> </h5>
+                            </div>
+                            <% if(user.order_status ==="Yet To Deliver") { %>        
+                                <div class="chngStatus">
+                                    <form action="/delivered/<%= product._id %>"  method="POST">
+                                        <button type="submit" class="btn btn-info">Change Status</button>
+                                    </form>
+                                </div>
+                            <% } %>                        
+                        </div>
+                    </div>
+            <% }) %>
+        <%})%>
+    </div>
+</div>

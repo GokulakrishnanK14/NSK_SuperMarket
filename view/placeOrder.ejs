@@ -1,0 +1,67 @@
+<%- include("./partials/navbar") %>
+    <% var total=0; %>
+    <% var amt=0 %> 
+    <div class="row PO">
+        <div class="container-fluid placeOrderContainer col-8">
+            <div class="putBorder">
+                <h3 class="UserNamePO"><%= currentUser.username %>'s Order Summary</h3>
+            </div>
+    
+            <div class="putBorder">
+                <h4>Delivery Address</h4>
+                <pre>
+                    <%= currentUser.doorNo %>,
+                    <%= currentUser.street %>,
+                    <%= currentUser.area %>,
+                    <%= currentUser.Thanjavur%>,
+                    <%= currentUser.pincode  %>
+                </pre> 
+            </div>
+
+            <div class="putBorder">
+                
+                <% (activeUser.cartItems).forEach(function(product) { %>
+                    <% total = total +1; %>
+                    <% amt = amt + (parseInt(product.p_price)* parseInt(product.p_req_quan))   %>
+                    <div class="row">
+                        <div class="col-2 summaryPO">
+                            <img src="<%= product.p_img %>" alt="...">
+                        </div>
+                        <div class="col nameqty">
+                            <h4><%= product.p_title %> </h4>
+                            <h5>Qty : <%= product.p_req_quan %></h5>
+                        </div>
+                    </div>
+                    <hr>
+                 <%}) %>
+
+            </div>
+
+        </div>
+
+        <div class="col-3 h-25 d-inline-block amtSummary">
+            <h3 class="summaryPO">PRICE DETAILS</h3>
+            <h6>No Of Items   :  <%= total %></h6>
+            <% if(amt>1000){ %>
+                <h6>Deliver Charge : Free</h6>
+            <% }else{ %>
+                <h6>Deliver Charge : 40</h6>
+                <% amt = amt +40; %>
+            <% } %>
+            <h4>Total Amount</h4>
+            <h2>₹<%= amt %></h2>
+        </div>
+    </div>
+    
+    <div class="putBorder">
+        <form action="/modeselection/<%=amt%>" method="GET">
+            <button type="submit" class="btn btn-outline-success btn-lg">Proceed Payment</button>
+        </form>
+        
+    </div>
+
+
+
+    <%- include("./partials/footer") %>
+</body>
+</head>

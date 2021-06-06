@@ -1,0 +1,461 @@
+body
+{
+    background-color: #f5f4f2;
+}
+
+/* home.ejs */
+.after_nav
+{
+    margin-top: 2%;
+}
+.display_category
+{
+    background-color: #f5f4f2;
+    margin-left: 1%;
+}
+
+.category h4
+{
+    text-align: center;
+}
+
+.category
+{
+    border-style: solid;
+    border-color: #f5f4f2;
+    border-width: 6px;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 0%;
+    padding-right: 0%;
+    background-color:white;
+}
+
+.category img
+{
+    width: 320px;
+    height: 200px;
+    margin-left: 15%;
+} 
+
+
+
+/* LoginForm - addNewPdtForm - editForm*/
+/* .logInForm
+{
+
+    width: 60%;
+    margin-left: 30%;
+    margin-top: 10%;
+    
+} */
+.signUpForm
+{
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
+}
+.logInForm form , .signUpForm form 
+{
+    border-style: solid ;
+    border-width: 2px;
+    border-color: black;
+    padding: 10%;
+}
+.editForm ,.addnewpdt
+{
+    width: 50%;
+    margin-left: 24%;
+    margin-top: 4%;      
+}
+.editForm form ,.addnewpdt form
+{
+    border-style: solid ;
+    border-width: 2px;
+    border-color: black;
+    padding: 5%;
+    padding-bottom: 1%;
+}
+
+/* category.ejs */
+
+.card_pdts img
+{
+    width: 270px;
+    height: 250px;
+    margin-left: 8px;
+}
+
+.card
+{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.card_pdts
+{
+    margin-top: 5%;
+}
+
+.mkcenter{
+    margin-left: 10%;
+}
+
+
+/* cart.ejs */
+.wholeCart
+{
+    margin-top: 3%;
+}
+
+.quans
+{
+    padding-right: 0%;
+    align-items: center;
+}
+.plus
+{
+    padding-left: 0%;
+}
+.quans input{
+    width: 70%;
+    height: 100%;
+    /* padding-right: 0%; */
+    font-weight: 500;
+    text-align: center;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.cartLabel
+{
+    width: 100%;
+}
+.eachPdt
+{
+    margin-bottom: 3% ;
+}
+.cartLabel img
+{
+    width: 320px;
+    height: 300px;
+
+}
+.details .price
+{
+    color: blue;
+}
+
+.cartLabel
+{
+    background-color: white;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: solid;
+    border-width:1px ;
+    padding-top : 3%;
+    padding-bottom : 3%;
+}
+
+.cartLabel .buttonsDown
+{
+    margin-top: 3%;
+    float: left;
+}
+
+.cartLabel .details
+{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 5%;
+    
+}
+
+.cartSummary
+{
+    border:2px black solid;
+    border-radius: 25px;
+    height: 290px;   
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+    padding-top: 14px;
+    background-color: white;
+}
+
+.cartSummary .unameCS
+{
+  color:red;
+}
+
+.cartSummary
+{
+  text-transform: capitalize;
+}
+
+
+
+
+
+/* place Order */
+.putBorder
+{
+    margin-top: 1%;
+    margin-bottom: 2;
+    padding: 2%;
+    background-color: white;
+}
+
+.placeOrderContainer{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.amtSummary
+{
+    margin-top: 1%;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+.amtSummary h5 , .amtSummary h6
+{
+    border-bottom: 1px solid  #f5f4f2;
+    padding: 2%;
+}
+
+.summaryPO img
+{
+    width: 90px;
+    height: 120px;
+    margin-bottom: 1%;
+
+}
+.PO
+{
+  text-transform: capitalize;
+}
+.UserNamePO ,.summaryPO
+{
+  color: red;
+  
+}
+
+
+
+.nameqty
+{
+  padding: 25;
+}
+.nameqty  h4
+{
+  color: blue;
+}
+
+/* .summaryPO
+{
+  padding-top: 10%;
+
+} */
+.amtSummary
+{
+  padding: 5%;
+  border-radius: 10%;
+  border: 2px black solid;
+}
+
+/* show page */
+
+.details
+{
+ background-color: white; 
+ padding-top: 2%;  
+}
+
+.img_det
+{
+    margin-top: 5%;
+    border: 2px solid white;
+}
+
+/* common for both cart and show pages */
+.details .title
+{
+    color: red;
+}
+
+.details .brand , .title
+{
+    text-transform: capitalize;
+}
+
+/*sticky navbar*/
+.rt{
+  margin-left: 65%;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } 
+.sticky + .display_category {
+    padding-top: 60px;
+}
+
+/*Footer */
+.site-footer
+{
+  background-color: royalblue;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color: white;
+}
+.site-footer hr
+{
+  border-top-color: white;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color: white;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color: chartreuse
+}
+.site-footer a:hover
+{
+  color: gold;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color: chartreuse
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color: white;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer 
+  {
+    text-align:center
+  }
+}
+/* orderdb.ejs */
+.status
+{
+  width: 50%;
+}
+.nameInOrderDB
+{
+  color: red;
+  margin-top: 20px;
+  margin-left: 110px;
+}
+.needForScroll
+{
+  border: 2px black solid;
+  border-radius: 10px;
+  height: 200px;
+  overflow: auto;
+  background-color: white;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.totAmt
+{
+  color: royalblue;
+}
+.chngStatus
+{
+  margin-left: 25%;
+  margin-bottom: 0%;
+  position: absolute;
+  bottom:   0;
+}
+.odStatus
+{
+  background-color: royalblue;
+  color: white;
+  padding: 5px;
+  margin-right: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.OD
+{
+  font-weight: bold;
+}
+
+
+/* selectMode.ejs */
+.modeSelection
+{
+  background-color: white;
+  margin-top: 50px;
+  height: 600px;
+  
+}
+.modeSelection h3
+{
+  text-align: center;
+  margin-bottom: 5%;
+  padding-top: 5%;
+  color: royalblue;
+}
+.modeSelectionC .card
+{
+  align-items: center;
+  margin-left: 22%;
+  /* padding: 3%; */
+}
+

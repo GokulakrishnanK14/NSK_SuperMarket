@@ -1,0 +1,59 @@
+<%- include("./partials/navbar") %> 
+<%- include("./partials/successFlash") %> 
+<% if(currentUser.username==='ADMIN'){ %>
+  <div class="addnewpdt">
+    <h3>Add New Product</h3>
+    <form action="/insertNew" method="POST">
+        <div class="form-group">
+          <label for="title">Name</label>
+          <input type="text" class="form-control" id="title" name="title" aria-describedby="emailHelp" >
+        </div>
+        <div class="form-group">
+          <label for="desc">Description</label>
+          <textarea name="desc" class="form-control" id="desc" cols="30" rows="3"></textarea>
+          
+        </div>
+        <div class="form-group">
+          <label for="price">Price per unit</label>
+          <input type="text" class="form-control" id="price" name="price">
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" class="form-control" id="brand" name="brand">
+        </div>
+        
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input type="text" class="form-control" id="category" name="category">
+        </div>
+        <div class="form-group">
+          <label for="subCategory">Sub-category</label>
+          <input type="text" class="form-control" id="subCategory" name="subCategory">
+        </div>
+        <div class="form-group">
+          <label for="genName">General name</label>
+          <input type="text" class="form-control" id="genName" name="generalName">
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input type="text" class="form-control" id="quantity" name="quantity">
+        </div>
+
+        <div class="form-group">
+          <label for="img">Image URL</label>
+          <input type="text" class="form-control" id="img" name="img">
+        </div>
+        <div class="form-group">
+          <label for="stock">InStock</label>
+          <input type="text" class="form-control" id="stock" name="stock">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Add Product</button>
+      </form>
+  </div>
+<% }else{ %>
+
+  for office use
+<% } %>
+<%- include("./partials/footer") %>
+</body>
+</html>

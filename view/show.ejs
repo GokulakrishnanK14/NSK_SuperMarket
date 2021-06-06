@@ -1,0 +1,42 @@
+<%- include("./partials/navbar") %>
+    <div class="container">
+        <div class="row img_det">
+          <div class="col-5">
+            <img src="<%= pdt.img %>" alt="" class="img-thumbnail">
+          </div>
+          <div class="col-7 details">
+          
+            <h2 class="title"><%= pdt.title  %> </h2>
+            <h6 class="quantity"><%=pdt.quantity%></h6>
+            <hr style="clear:both;"/>
+            <p  class="brand">from <%=pdt.brand%></p>
+            <h5 class="price" >₹<%=pdt.price%></h5>
+            
+            <p><%=pdt.description %></p>
+            
+
+            <% if(!currentUser){ %>    
+              <form action="/cart/<%= pdt.category %>/<%= pdt._id %>" method="GET">
+                <input type="submit" value="Add To Cart" class="btn btn-outline-primary">
+              </form>
+              <!-- <a href="/placeOrder/<%= pdt._id %>" class="btn btn-outline-success btn-sm">Buy Now</a>                                       -->
+              
+          <% }else{ %>
+            <% if(currentUser.username==='ADMIN'){ %>
+              <a href="/pdtEdit/<%= pdt._id %>" class="btn btn-outline-primary btn-sm">Edit</a>
+              <a href="#" class="btn btn-outline-danger btn-sm">Delete</a>
+            <% } else { %>
+              <form action="/cart/<%= pdt.category %>/<%= pdt._id %>" method="GET">
+                <input type="submit" value="Add To Cart" class="btn btn-outline-primary btn-lg btn-block">
+              </form>
+            <% } %>
+          <%}%>
+
+          </div>
+        </div>
+      </div>
+
+
+      <%- include("./partials/footer") %>     
+</body>
+</html>
