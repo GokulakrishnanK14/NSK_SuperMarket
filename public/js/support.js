@@ -34,7 +34,6 @@ function up(btnId)
         amt = amt+40;
     }
     document.getElementById('final').innerText = amt;
-    alert(amt)
     axios.post('/incrementQuantity/'+pdtID,{incre : newQuan}).then(data=>{
         console.log(data)
     }).catch(err=>{

@@ -36,6 +36,7 @@
           <% }else{ %>
               <% if(currentUser.username==='ADMIN'){ %>
                 <li class="nav-item active"><a class="nav-link" href="/addPdtAdmin" role="button">AddNewProduct</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/adminDB" role="button">Orders</a></li>
                 <li class="nav-item active"><a class="nav-link" href="/logout" role="button">Logout</a></li>                
               <% } else { %>  
                 <li class="nav-item active"><a class="nav-link" href="#" role="button">Hi <%=currentUser.username%> !</a></li>
