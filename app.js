@@ -466,9 +466,11 @@ app.post("/delivered/:id",(req,res)=>{
     })
 }) 
 
+app.get('/return',(req,res)=>{
+    res.render("return")
+})
 
 app.listen(process.env.PORT||3000,()=>{
     console.log('Server Started');
 })      
 
-// hey kgk
